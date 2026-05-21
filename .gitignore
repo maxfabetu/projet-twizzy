@@ -1,0 +1,74 @@
+# Maven
+target/
+.mvn/
+mvnw
+mvnw.cmd
+dependency-reduced-pom.xml
+
+# IDE
+.idea/
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+*.iml
+*.ipr
+*.iws
+nbproject/
+out/
+bin/
+
+# Java
+*.class
+*.jar
+!models/*.jar
+hs_err_pid*
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Datasets (volumineux, à télécharger séparément)
+data/raw/
+data/yolo/train/
+data/yolo/valid/
+data/yolo/test/
+data/checkpoints/
+BDD_Roboflow_Tazi.zip
+Dataset1.zip
+
+# Artifacts d'entraînement Python (lourds)
+runs/
+
+# Sorties générées localement
+videos/output/
+reports/
+target/
+
+# Modèles alternatifs (le modèle final est versionné)
+models/pretrained_candidates/
+models/yolov8_finetuned_v1.*
+models/haar_signs.xml
+models/cnn_classifier.onnx
+models/yolov8s_signs.onnx
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives temporaires
+*.zip
+!data/yolo/classes.txt

@@ -1,0 +1,45 @@
+app:
+  paths:
+    rawDataset: "data/raw/BDD_Roboflow_Tazi/BDD_Roboflow_Tazi"
+    yoloDataset: "data/yolo"
+    checkpoints: "data/checkpoints"
+    models: "models"
+    videosIn: "videos/input"
+    videosOut: "videos/output"
+    reports: "reports"
+
+  classes:
+    - { id: 0, csv: "Speed_limit_50_km_h",  short: "50",  yoloId: 0 }
+    - { id: 1, csv: "Speed_limit_70_km_h",  short: "70",  yoloId: 1 }
+    - { id: 2, csv: "Speed_limit_90_km_h",  short: "90",  yoloId: 2 }
+    - { id: 3, csv: "Speed_limit_110_km_h", short: "110", yoloId: 3 }
+
+  yolo:
+    modelPath: "models/yolov8_finetuned.onnx"
+    inputSize: 1024
+    numClasses: 4
+    confidenceThreshold: 0.20
+    nmsIouThreshold: 0.45
+    useCuda: true
+
+  haarCnn:
+    cascadePath: "models/haar_signs.xml"
+    cnnPath: "models/cnn_classifier.onnx"
+    cnnInputSize: 64
+    minRoi: 24
+    maxRoi: 200
+    cnnConfThreshold: 0.55
+
+  tracker:
+    windowFrames: 15
+    minDetections: 5
+    minMeanConfidence: 0.50
+    video1Sequence: ["90", "70", "50"]
+    video2Sequence: ["110"]
+
+  runtime:
+    cpuLoadCap: 0.80
+    ramLoadCap: 0.80
+    progressIntervalSec: 5
+    checkpointEveryN: 100
+    etaWindow: 20

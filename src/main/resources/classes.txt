@@ -1,0 +1,4 @@
+0 Speed_limit_50_km_h
+1 Speed_limit_70_km_h
+2 Speed_limit_90_km_h
+3 Speed_limit_110_km_h

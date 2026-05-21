@@ -1,0 +1,6 @@
+path: D:/Téléchargements/Vsion ENSEM/data/yolo
+train: train/images
+val: valid/images
+test: test/images
+nc: 4
+names: ['50', '70', '90', '110']
